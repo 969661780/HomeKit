@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="HomeKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的家：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMl-30-mmX">
+                                <rect key="frame" x="20" y="100" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的房间：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWU-oQ-AeG">
+                                <rect key="frame" x="20" y="302" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQC-84-rCF">
+                                <rect key="frame" x="97" y="100" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fg2-Y5-p5N">
+                                <rect key="frame" x="10" y="331" width="355" height="326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y14-iu-GlU">
+                                    <size key="itemSize" width="70" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KAX-VL-QHv">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="aUq-KQ-Gjs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0iL-eJ-3Ww"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgj-i5-bUc">
+                                <rect key="frame" x="10" y="131" width="70" height="30"/>
+                                <state key="normal" title="添加hoom">
+                                    <color key="titleColor" red="0.15770641290000001" green="1" blue="0.41914332879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addHomeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1QV-Ug-jyn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd4-39-lTq">
+                                <rect key="frame" x="137.5" y="131" width="100" height="30"/>
+                                <state key="normal" title="查看全部home">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="featchHoomBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKk-X2-o0N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxa-KL-9Po">
+                                <rect key="frame" x="295" y="131" width="70" height="30"/>
+                                <state key="normal" title="移除home">
+                                    <color key="titleColor" red="1" green="0.31355366150000002" blue="0.32968060599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeHomeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8kv-J7-qWB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bxa-KL-9Po" firstAttribute="top" secondItem="vd4-39-lTq" secondAttribute="top" id="3pz-1B-ScL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fg2-Y5-p5N" secondAttribute="bottom" constant="10" id="5L6-19-QGV"/>
+                            <constraint firstItem="Fg2-Y5-p5N" firstAttribute="top" secondItem="HWU-oQ-AeG" secondAttribute="bottom" constant="8" id="9OS-d8-OOG"/>
+                            <constraint firstItem="lgj-i5-bUc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="GHe-Fv-cno"/>
+                            <constraint firstItem="Fg2-Y5-p5N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Jqv-WJ-sed"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bxa-KL-9Po" secondAttribute="trailing" constant="10" id="MwI-qi-o1x"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QMl-30-mmX" secondAttribute="trailing" constant="20" symbolic="YES" id="WhD-V0-yrJ"/>
+                            <constraint firstItem="QMl-30-mmX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bcO-0b-y9t"/>
+                            <constraint firstItem="HWU-oQ-AeG" firstAttribute="top" secondItem="QMl-30-mmX" secondAttribute="bottom" constant="181" id="bxy-sX-QA5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fg2-Y5-p5N" secondAttribute="trailing" constant="10" id="ccw-br-HK7"/>
+                            <constraint firstItem="vd4-39-lTq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gvc-oI-fTN"/>
+                            <constraint firstItem="XQC-84-rCF" firstAttribute="leading" secondItem="QMl-30-mmX" secondAttribute="trailing" constant="7.5" id="jzP-Js-DQd"/>
+                            <constraint firstItem="XQC-84-rCF" firstAttribute="centerY" secondItem="QMl-30-mmX" secondAttribute="centerY" id="lzc-yO-tBF"/>
+                            <constraint firstItem="vd4-39-lTq" firstAttribute="top" secondItem="lgj-i5-bUc" secondAttribute="top" id="qBf-Lx-yQR"/>
+                            <constraint firstItem="QMl-30-mmX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="qKn-ld-GqO"/>
+                            <constraint firstItem="HWU-oQ-AeG" firstAttribute="leading" secondItem="QMl-30-mmX" secondAttribute="leading" id="sqd-iG-i8q"/>
+                            <constraint firstItem="lgj-i5-bUc" firstAttribute="top" secondItem="QMl-30-mmX" secondAttribute="bottom" constant="10" id="t2C-tB-LzK"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HWU-oQ-AeG" secondAttribute="trailing" constant="20" symbolic="YES" id="xbb-UC-hV5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myCollectionView" destination="Fg2-Y5-p5N" id="LZa-YG-0OV"/>
+                        <outlet property="myHomeNameLab" destination="XQC-84-rCF" id="gce-QE-fYG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
